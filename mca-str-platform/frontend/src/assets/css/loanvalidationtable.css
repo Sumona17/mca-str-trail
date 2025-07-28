@@ -1,0 +1,35 @@
+th.column-grey {
+  background-color: lightgray;
+  color: #003b6d !important;
+  text-align: center;
+  width: 100px;
+}
+
+th.column-blue {
+  background-color: #003b6d !important;
+  color: white !important;
+  text-align: center;
+  width: 50px;
+}
+
+th.column-green {
+  background-color: #256029 !important;
+  color: white !important;
+  text-align: center;
+  width: 50px;
+}
+
+th.column-lightblue {
+  background-color: #7BC9FF;
+  color: #0871C0 !important;
+  text-align: center;
+  width: 100px;
+}
+
+th.column-lightgrey {
+  background-color: #DCDCDC !important;
+  color: #1A1A1A !important;
+  font-weight: 700;
+  text-align: center;
+  width: 100px;
+}

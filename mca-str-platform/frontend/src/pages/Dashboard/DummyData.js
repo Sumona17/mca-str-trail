@@ -1,0 +1,97 @@
+export const columns = [
+  { title: '#', dataIndex: 'key', key: 'key' },
+  { title: 'Employer', dataIndex: 'employer', key: 'employer' },
+  { title: 'Plan', dataIndex: 'plan', key: 'plan' },
+  { title: 'Plan ID', dataIndex: 'planId', key: 'planId' },
+  { title: 'Plan Type', dataIndex: 'planType', key: 'planType' },
+  { title: 'Ppts', dataIndex: 'ppts', key: 'ppts' },
+  { title: 'Total Assets', dataIndex: 'totalAssets', key: 'totalAssets' },
+  { title: 'Action Items', dataIndex: 'actionItems', key: 'actionItems' },
+  { title: 'Product', dataIndex: 'product', key: 'product' },
+];
+
+export const dataSource = [
+  {
+    key: '1',
+    employer: 'State Insurance Partners',
+    plan: 'State Ins Partners Savings Plan',
+    planId: '88-1357924',
+    planType: '401(k)',
+    ppts: 25,
+    totalAssets: '$1,200,000',
+    actionItems: 2,
+    product: 'Retirement Plan',
+  },
+  {
+    key: '2',
+    employer: 'Joe Frazier Box Co.',
+    plan: 'Joe Frazier Retirement Plan',
+    planId: '88-1234567',
+    planType: 'Profit Sharing',
+    ppts: 30,
+    totalAssets: '$985,000',
+    actionItems: 1,
+    product: 'Retirement Plan',
+  },
+  {
+    key: '3',
+    employer: "Bob's Supermarket",
+    plan: "Bob's Super Market Retirement Plan",
+    planId: '99-1357924',
+    planType: '401(k)',
+    ppts: 42,
+    totalAssets: '$2,340,000',
+    actionItems: 3,
+    product: 'Retirement Plan',
+  },
+  {
+    key: '4',
+    employer: 'Fast Paced Car Repair',
+    plan: 'FPCP 401(k) Plan',
+    planId: '99-2468013',
+    planType: '401(k)',
+    ppts: 18,
+    totalAssets: '$760,000',
+    actionItems: 0,
+    product: 'Retirement Plan',
+  },
+  {
+    key: '5',
+    employer: 'Knight Train Railroad',
+    plan: 'Knight Train 401(k) Plan',
+    planId: '88-1234567',
+    planType: '401(k)',
+    ppts: 36,
+    totalAssets: '$1,640,000',
+    actionItems: 4,
+    product: 'Retirement Plan',
+  },
+  {
+    key: '6',
+    employer: 'Bigtime Bank, LLC',
+    plan: 'Bigtime Bank Profit Sharing',
+    planId: '98-8642975',
+    planType: 'Profit Sharing',
+    ppts: 22,
+    totalAssets: '$1,120,000',
+    actionItems: 1,
+    product: 'Retirement Plan',
+  },
+  {
+    key: '7',
+    employer: 'SC Teachers Association',
+    plan: "SC Teacher's Retirement",
+    planId: '99-2468013',
+    planType: '403(b)',
+    ppts: 45,
+    totalAssets: '$3,800,000',
+    actionItems: 5,
+    product: 'Retirement Plan',
+  },
+];
+
+
+
+
+
+

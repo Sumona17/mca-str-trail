@@ -1,0 +1,533 @@
+[
+  {
+    "alias": "employer_name",
+    "query_text": "What is employer name?",
+    "text": "Test Case 1 - Knight Train Railroad Company",
+    "confidence": 89.0,
+    "bounding_box": {
+      "Width": 0.23013822734355927,
+      "Height": 0.009340759366750717,
+      "Left": 0.18134883046150208,
+      "Top": 0.3909408450126648
+    },
+    "page": 1
+  },
+  {
+    "alias": "employer_address",
+    "query_text": "What is employer address?",
+    "text": "401 Boones Farm Road, Cherry Creek CO, 30198",
+    "confidence": 97.0,
+    "bounding_box": {
+      "Width": 0.2543178200721741,
+      "Height": 0.009340915828943253,
+      "Left": 0.18825730681419373,
+      "Top": 0.40895235538482666
+    },
+    "page": 1
+  },
+  {
+    "alias": "employer_phone",
+    "query_text": "What is employer phone?",
+    "text": "(401) 501 4032",
+    "confidence": 96.0,
+    "bounding_box": {
+      "Width": 0.08419694006443024,
+      "Height": 0.009339910931885242,
+      "Left": 0.21718654036521912,
+      "Top": 0.42763200402259827
+    },
+    "page": 1
+  },
+  {
+    "alias": "employer_tin",
+    "query_text": "What is employer tin?",
+    "text": "88-1234567",
+    "confidence": 98.0,
+    "bounding_box": {
+      "Width": 0.061312589794397354,
+      "Height": 0.00733847264200449,
+      "Left": 0.3644232153892517,
+      "Top": 0.44564297795295715
+    },
+    "page": 1
+  },
+  {
+    "alias": "employer_email",
+    "query_text": "What is employer email?",
+    "text": "NTRCompany@NTRC.com",
+    "confidence": 98.0,
+    "bounding_box": {
+      "Width": 0.13989639282226562,
+      "Height": 0.009006707929074764,
+      "Left": 0.24093443155288696,
+      "Top": 0.4616536498069763
+    },
+    "page": 1
+  },
+  {
+    "alias": "employer_employers_taxable_year",
+    "query_text": "What is employer employers taxable year?",
+    "text": "December 31",
+    "confidence": 98.0,
+    "bounding_box": {
+      "Width": 0.0664939433336258,
+      "Height": 0.007004961371421814,
+      "Left": 0.33981186151504517,
+      "Top": 0.4809993803501129
+    },
+    "page": 1
+  },
+  {
+    "alias": "plan_plan_name",
+    "query_text": "What is plan plan name?",
+    "text": "Knight Train 401(k) Plan",
+    "confidence": 96.0,
+    "bounding_box": {
+      "Width": 0.12262528389692307,
+      "Height": 0.009340178221464157,
+      "Left": 0.1964612454175949,
+      "Top": 0.5253620743751526
+    },
+    "page": 1
+  },
+  {
+    "alias": "plan_plan_number",
+    "query_text": "What is plan plan number?",
+    "text": "001",
+    "confidence": 99.0,
+    "bounding_box": {
+      "Width": 0.01770295575261116,
+      "Height": 0.00700466800481081,
+      "Left": 0.20509684085845947,
+      "Top": 0.5433744192123413
+    },
+    "page": 1
+  },
+  {
+    "alias": "plan_trust_ein",
+    "query_text": "What is plan trust ein?",
+    "text": "99-6001579",
+    "confidence": 99.0,
+    "bounding_box": {
+      "Width": 0.061312634497880936,
+      "Height": 0.00733849685639143,
+      "Left": 0.2495701164007187,
+      "Top": 0.5617191195487976
+    },
+    "page": 1
+  },
+  {
+    "alias": "plan_limitation_year_plan_year_end_checked",
+    "query_text": "What is plan limitation year plan year end checked?",
+    "text": "December 31",
+    "confidence": 93.0,
+    "bounding_box": {
+      "Width": 0.0857267677783966,
+      "Height": 0.009067104198038578,
+      "Left": 0.1546143889427185,
+      "Top": 0.6723620891571045
+    },
+    "page": 1
+  },
+  {
+    "alias": "plan_limitation_year_limitation_year_end_checked",
+    "query_text": "What is plan limitation year limitation year end checked?",
+    "text": "December 31",
+    "confidence": 91.0,
+    "bounding_box": {
+      "Width": 0.0857267677783966,
+      "Height": 0.009067104198038578,
+      "Left": 0.1546143889427185,
+      "Top": 0.6723620891571045
+    },
+    "page": 1
+  },
+  {
+    "alias": "effective_dates_restated_plan_checked",
+    "query_text": "What is effective dates restated plan checked?",
+    "text": "d",
+    "confidence": 17.0,
+    "bounding_box": {
+      "Width": 0.013981875963509083,
+      "Height": 0.00920515600591898,
+      "Left": 0.09022434800863266,
+      "Top": 0.25780850648880005
+    },
+    "page": 2
+  },
+  {
+    "alias": "effective_dates_restated_plan_ppa_restatement_checked",
+    "query_text": "What is effective dates restated plan ppa restatement checked?",
+    "text": "d",
+    "confidence": 31.0,
+    "bounding_box": {
+      "Width": 0.013981875963509083,
+      "Height": 0.00920515600591898,
+      "Left": 0.09022434800863266,
+      "Top": 0.25780850648880005
+    },
+    "page": 2
+  },
+  {
+    "alias": "effective_dates_initial_effective_date_of_plan_checked",
+    "query_text": "What is effective dates initial effective date of plan checked?",
+    "text": "1/1/2023",
+    "confidence": 97.0,
+    "bounding_box": {
+      "Width": 0.0681924894452095,
+      "Height": 0.010670564137399197,
+      "Left": 0.16443203389644623,
+      "Top": 0.21874381601810455
+    },
+    "page": 2
+  },
+  {
+    "alias": "effective_dates_initial_effective_date_of_plan_value",
+    "query_text": "What is effective dates initial effective date of plan value?",
+    "text": "1/1/2023",
+    "confidence": 98.0,
+    "bounding_box": {
+      "Width": 0.0681924894452095,
+      "Height": 0.010670564137399197,
+      "Left": 0.16443203389644623,
+      "Top": 0.21874381601810455
+    },
+    "page": 2
+  },
+  {
+    "alias": "effective_dates_restatement_effective_date_checked",
+    "query_text": "What is effective dates restatement effective date checked?",
+    "text": "d",
+    "confidence": 86.0,
+    "bounding_box": {
+      "Width": 0.013981875963509083,
+      "Height": 0.00920515600591898,
+      "Left": 0.09022434800863266,
+      "Top": 0.25780850648880005
+    },
+    "page": 2
+  },
+  {
+    "alias": "effective_dates_restatement_effective_date_value",
+    "query_text": "What is effective dates restatement effective date value?",
+    "text": "d",
+    "confidence": 47.0,
+    "bounding_box": {
+      "Width": 0.013981875963509083,
+      "Height": 0.00920515600591898,
+      "Left": 0.09022434800863266,
+      "Top": 0.25780850648880005
+    },
+    "page": 2
+  },
+  {
+    "alias": "effective_dates_restatement_of_surviving_and_merging_plans_check",
+    "query_text": "What is effective dates restatement of surviving and merging plans checked?",
+    "text": "d",
+    "confidence": 10.0,
+    "bounding_box": {
+      "Width": 0.013981875963509083,
+      "Height": 0.00920515600591898,
+      "Left": 0.09022434800863266,
+      "Top": 0.25780850648880005
+    },
+    "page": 2
+  },
+  {
+    "alias": "trustee_use_of_non_approved_trust_checked",
+    "query_text": "What is trustee use of non approved trust checked?",
+    "text": "No",
+    "confidence": 94.0,
+    "bounding_box": {},
+    "page": 2
+  },
+  {
+    "alias": "trustee_use_of_non_approved_trust_value",
+    "query_text": "What is trustee use of non approved trust value?",
+    "text": "No",
+    "confidence": 44.0,
+    "bounding_box": {},
+    "page": 2
+  },
+  {
+    "alias": "contribution_types_Contributions_cease_checked",
+    "query_text": "What is contribution types Contributions cease checked?",
+    "text": "All Contributions have ceased or will cease",
+    "confidence": 32.0,
+    "bounding_box": {
+      "Width": 0.23219747841358185,
+      "Height": 0.009006036445498466,
+      "Left": 0.3094450533390045,
+      "Top": 0.09402528405189514
+    },
+    "page": 3
+  },
+  {
+    "alias": "contribution_types_pre_tax_deferrals_checked",
+    "query_text": "What is contribution types pre tax deferrals checked?",
+    "text": "[]",
+    "confidence": 52.0,
+    "bounding_box": {
+      "Width": 0.019844258204102516,
+      "Height": 0.011316630057990551,
+      "Left": 0.863756000995636,
+      "Top": 0.908628523349762
+    },
+    "page": 3
+  },
+  {
+    "alias": "contribution_types_pre_tax_deferrals_roth_deferrals_checked",
+    "query_text": "What is contribution types pre tax deferrals roth deferrals checked?",
+    "text": "Nonelective.",
+    "confidence": 15.0,
+    "bounding_box": {
+      "Width": 0.07269704341888428,
+      "Height": 0.008898462168872356,
+      "Left": 0.8369989395141602,
+      "Top": 0.7743242979049683
+    },
+    "page": 3
+  },
+  {
+    "alias": "contribution_types_matching",
+    "query_text": "What is contribution types matching?",
+    "text": "Nonelective",
+    "confidence": 94.0,
+    "bounding_box": {
+      "Width": 0.07639140635728836,
+      "Height": 0.009003760293126106,
+      "Left": 0.15450526773929596,
+      "Top": 0.2910967171192169
+    },
+    "page": 3
+  },
+  {
+    "alias": "contribution_types_nonelective",
+    "query_text": "What is contribution types nonelective?",
+    "text": "See Sections 1.38 and 3.04 and Elections 27-29",
+    "confidence": 29.0,
+    "bounding_box": {
+      "Width": 0.24077706038951874,
+      "Height": 0.022331692278385162,
+      "Left": 0.22310344874858856,
+      "Top": 0.25717875361442566
+    },
+    "page": 3
+  },
+  {
+    "alias": "contribution_types_safe_harbor_additional_matching",
+    "query_text": "What is contribution types safe harbor additional matching?",
+    "text": "Nonelective",
+    "confidence": 75.0,
+    "bounding_box": {
+      "Width": 0.07269704341888428,
+      "Height": 0.008898462168872356,
+      "Left": 0.8369989395141602,
+      "Top": 0.7743242979049683
+    },
+    "page": 3
+  },
+  {
+    "alias": "contribution_types_employee_after_tax",
+    "query_text": "What is contribution types employee after tax?",
+    "text": "Nonelective",
+    "confidence": 57.0,
+    "bounding_box": {
+      "Width": 0.07269704341888428,
+      "Height": 0.008898462168872356,
+      "Left": 0.8369989395141602,
+      "Top": 0.7743242979049683
+    },
+    "page": 3
+  },
+  {
+    "alias": "contribution_types_simple_401k",
+    "query_text": "What is contribution types simple 401k?",
+    "text": "Nonelective",
+    "confidence": 37.0,
+    "bounding_box": {
+      "Width": 0.07269704341888428,
+      "Height": 0.008898462168872356,
+      "Left": 0.8369989395141602,
+      "Top": 0.7743242979049683
+    },
+    "page": 3
+  },
+  {
+    "alias": "contribution_types_designated_ira",
+    "query_text": "What is contribution types designated ira?",
+    "text": "Nonelective",
+    "confidence": 62.0,
+    "bounding_box": {
+      "Width": 0.07639140635728836,
+      "Height": 0.009003760293126106,
+      "Left": 0.15450526773929596,
+      "Top": 0.2910967171192169
+    },
+    "page": 3
+  },
+  {
+    "alias": "disability_basic_plan",
+    "query_text": "What is disability basic plan?",
+    "text": "disability as defined in Section 1.16(A)",
+    "confidence": 44.0,
+    "bounding_box": {
+      "Width": 0.17565780878067017,
+      "Height": 0.011004757136106491,
+      "Left": 0.28916245698928833,
+      "Top": 0.48549461364746094
+    },
+    "page": 3
+  },
+  {
+    "alias": "excluded_employees_no_excluded_employees",
+    "query_text": "What is excluded employees no excluded employees?",
+    "text": "NOT_SELECTED",
+    "confidence": 47.0,
+    "bounding_box": {
+      "Width": 0.01855858415365219,
+      "Height": 0.010670295916497707,
+      "Left": 0.6754392385482788,
+      "Top": 0.9089712500572205
+    },
+    "page": 3
+  },
+  {
+    "alias": "excluded_employees_Exclusions_same_for_all_contribution_types",
+    "query_text": "What is excluded employees Exclusions same for all contribution types?",
+    "text": "SELECTED",
+    "confidence": 99.0,
+    "bounding_box": {
+      "Width": 0.01801922358572483,
+      "Height": 0.010745897889137268,
+      "Left": 0.11892444640398026,
+      "Top": 0.485514760017395
+    },
+    "page": 3
+  },
+  {
+    "alias": "excluded_employees_Exclusions_different_exclusions_apply",
+    "query_text": "What is excluded employees Exclusions different exclusions apply?",
+    "text": "the following employees are excluded employees for the designated Contribution Type",
+    "confidence": 45.0,
+    "bounding_box": {},
+    "page": 3
+  },
+  {
+    "alias": "excluded_employees_exclusions_no_exclusions_all_contributions",
+    "query_text": "What is excluded employees exclusions no exclusions all contributions?",
+    "text": "N/A",
+    "confidence": 91.0,
+    "bounding_box": {
+      "Width": 0.02546398714184761,
+      "Height": 0.008336154744029045,
+      "Left": 0.5097070336341858,
+      "Top": 0.7945992350578308
+    },
+    "page": 3
+  },
+  {
+    "alias": "excluded_employees_exclusions_collective_bargainingunion_employe",
+    "query_text": "What is excluded employees exclusions collective bargaining(union) employees checked?",
+    "text": "As described in Code 410(b)(3)(A)",
+    "confidence": 22.0,
+    "bounding_box": {
+      "Width": 0.21708907186985016,
+      "Height": 0.011003714986145496,
+      "Left": 0.154509037733078,
+      "Top": 0.841281533241272
+    },
+    "page": 3
+  },
+  {
+    "alias": "excluded_employees_exclusions_collective_bargainingunion_employe",
+    "query_text": "What is excluded employees exclusions collective bargaining(union) employees all contributions?",
+    "text": "As described in Code 410(b)(3)(A)",
+    "confidence": 21.0,
+    "bounding_box": {
+      "Width": 0.1972360610961914,
+      "Height": 0.011003710329532623,
+      "Left": 0.17436204850673676,
+      "Top": 0.8412815928459167
+    },
+    "page": 3
+  },
+  {
+    "alias": "excluded_employees_exclusions_collective_bargainingunion_employe",
+    "query_text": "What is excluded employees exclusions collective bargaining(union) employees elective deferrals?",
+    "text": "As described in Code 410(b)(3)(A)",
+    "confidence": 24.0,
+    "bounding_box": {
+      "Width": 0.21708907186985016,
+      "Height": 0.011003714986145496,
+      "Left": 0.154509037733078,
+      "Top": 0.841281533241272
+    },
+    "page": 3
+  },
+  {
+    "alias": "excluded_employees_exclusions_collective_bargainingunion_employe",
+    "query_text": "What is excluded employees exclusions collective bargaining(union) employees matching?",
+    "text": "As described in Code 410(b)(3)(A)",
+    "confidence": 24.0,
+    "bounding_box": {
+      "Width": 0.21708907186985016,
+      "Height": 0.011003714986145496,
+      "Left": 0.154509037733078,
+      "Top": 0.841281533241272
+    },
+    "page": 3
+  },
+  {
+    "alias": "excluded_employees_exclusions_collective_bargainingunion_employe",
+    "query_text": "What is excluded employees exclusions collective bargaining(union) employees nonelective?",
+    "text": "As described in Code 410(b)(3)(A)",
+    "confidence": 20.0,
+    "bounding_box": {
+      "Width": 0.21708907186985016,
+      "Height": 0.011003714986145496,
+      "Left": 0.154509037733078,
+      "Top": 0.841281533241272
+    },
+    "page": 3
+  },
+  {
+    "alias": "excluded_employees_exclusions_nonresident_aliens_checked",
+    "query_text": "What is excluded employees exclusions nonresident aliens checked?",
+    "text": "As described in Code 410(b)(3)(C)",
+    "confidence": 47.0,
+    "bounding_box": {
+      "Width": 0.21733322739601135,
+      "Height": 0.010723430663347244,
+      "Left": 0.15467268228530884,
+      "Top": 0.841570258140564
+    },
+    "page": 3
+  },
+  {
+    "alias": "excluded_employees_exclusions_nonresident_aliens_all_contributio",
+    "query_text": "What is excluded employees exclusions nonresident aliens all contributions?",
+    "text": "N/A",
+    "confidence": 92.0,
+    "bounding_box": {
+      "Width": 0.02546398714184761,
+      "Height": 0.008336154744029045,
+      "Left": 0.5097070336341858,
+      "Top": 0.7945992350578308
+    },
+    "page": 3
+  },
+  {
+    "alias": "excluded_employees_exclusions_HCEs_all_contributions",
+    "query_text": "What is excluded employees exclusions HCEs all contributions?",
+    "text": "N/A",
+    "confidence": 95.0,
+    "bounding_box": {
+      "Width": 0.02546398714184761,
+      "Height": 0.008336154744029045,
+      "Left": 0.5097070336341858,
+      "Top": 0.7945992350578308
+    },
+    "page": 3
+  }
+]
