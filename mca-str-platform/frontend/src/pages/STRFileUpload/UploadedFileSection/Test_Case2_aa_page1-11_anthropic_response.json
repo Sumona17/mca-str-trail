@@ -1,0 +1,1643 @@
+[
+  {
+    "page": 1
+  },
+  {
+    "page": 2,
+    "employer": {
+      "name": {
+        "value": "Joe Frazier Corrugated Box Company",
+        "confidence_score": 99.90676879882812,
+        "bounding_box": {
+          "width": 0.1928451657295227,
+          "height": 0.009467038325965405,
+          "left": 0.17600347101688385,
+          "top": 0.3876030743122101
+        }
+      },
+      "address": {
+        "value": "4015 North Tryon Street, Charlotte NC 21525",
+        "confidence_score": 99.89770180838448,
+        "bounding_box": {
+          "width": 0.22932909429073334,
+          "height": 0.00953562743961811,
+          "left": 0.17901767790317535,
+          "top": 0.4094730615615845
+        }
+      },
+      "phone": {
+        "value": "(401) 360 - 4015",
+        "confidence_score": 92.28700065612793,
+        "bounding_box": {
+          "width": 0.08371908962726593,
+          "height": 0.008975910022854805,
+          "left": 0.21719548106193542,
+          "top": 0.4275556206703186
+        }
+      },
+      "tin": {
+        "value": "98-123456",
+        "confidence_score": 99.873046875,
+        "bounding_box": {
+          "width": 0.0551711767911911,
+          "height": 0.007957885973155499,
+          "left": 0.3624449670314789,
+          "top": 0.4452601969242096
+        }
+      },
+      "email": {
+        "value": "Joe@JFCB.com",
+        "confidence_score": 99.38237762451172,
+        "bounding_box": {
+          "width": 0.08275774121284485,
+          "height": 0.007857132703065872,
+          "left": 0.2411033660173416,
+          "top": 0.46145114302635193
+        }
+      },
+      "employers_taxable_year": {
+        "value": "December 31",
+        "confidence_score": 99.79412460327148,
+        "bounding_box": {
+          "width": 0.06762877106666565,
+          "height": 0.007482060231268406,
+          "left": 0.33890873193740845,
+          "top": 0.48052501678466797
+        }
+      }
+    },
+    "plan": {
+      "name": {
+        "value": "Joe Frazier Retirement Plan",
+        "confidence_score": 99.88405799865723,
+        "bounding_box": {
+          "width": 0.14333409070968628,
+          "height": 0.007933077402412891,
+          "left": 0.1953388750553131,
+          "top": 0.52442467212677
+        }
+      },
+      "plan_number": {
+        "value": "001 (3-digit number for Form 5500 reporting)",
+        "confidence_score": 99.78113991873605,
+        "bounding_box": {
+          "width": 0.6042587161064148,
+          "height": 0.011867163702845573,
+          "left": 0.2046147882938385,
+          "top": 0.5429275631904602
+        }
+      },
+      "trust_ein": {
+        "value": "99-987654",
+        "confidence_score": 99.931640625,
+        "bounding_box": {
+          "width": 0.054755523800849915,
+          "height": 0.00785956159234047,
+          "left": 0.24937734007835388,
+          "top": 0.5611573457717896
+        }
+      }
+    },
+    "plan/limitation_year": {
+      "plan_year": {
+        "december_31": {
+          "checked": true,
+          "value": "December 31",
+          "confidence_score": 99.814453125,
+          "bounding_box": {
+            "width": 0.08543384820222855,
+            "height": 0.008922307752072811,
+            "left": 0.1541524976491928,
+            "top": 0.6721467971801758
+          }
+        },
+        "fiscal_plan_year": {
+          "checked": false,
+          "value": "Fiscal Plan Year: ending:",
+          "confidence_score": 99.96073722839355,
+          "bounding_box": {
+            "width": 0.15588292479515076,
+            "height": 0.01131973136216402,
+            "left": 0.15480484068393707,
+            "top": 0.6928471326828003
+          }
+        },
+        "short_plan_year": {
+          "checked": false,
+          "value": null,
+          "confidence_score": null,
+          "bounding_box": {
+            "width": null,
+            "height": null,
+            "left": null,
+            "top": null
+          }
+        }
+      },
+      "limitation_year": {
+        "general_same_as_plan_year": {
+          "checked": true,
+          "value": "Generally same as Plan Year. The Limitation Year is the same as the Plan Year except where the Plan Year is a short year in which event the Limitation Year is always a 12 month period, unless the short Plan Year (and short Limitation Year) result from a Plan amendment.",
+          "confidence_score": 99.94232711791992,
+          "bounding_box": {
+            "width": 0.7560474872589111,
+            "height": 0.03575662150979042,
+            "left": 0.15328086912631989,
+            "top": 0.7506175637245178
+          }
+        },
+        "different_limitation_year": {
+          "checked": false,
+          "value": "[ ]Different Limitation Year: ending:",
+          "confidence_score": 91.49007415771484,
+          "bounding_box": {
+            "width": 0.25240665674209595,
+            "height": 0.011519139632582664,
+            "left": 0.11721890419721603,
+            "top": 0.7976678013801575
+          }
+        },
+        "short_limitation_year": {
+          "checked": false,
+          "value": null,
+          "confidence_score": null,
+          "bounding_box": {
+            "width": null,
+            "height": null,
+            "left": null,
+            "top": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "page": 3,
+    "effective_dates": {
+      "new_plan": {
+        "checked": false,
+        "value": null,
+        "confidence_score": null,
+        "bounding_box": null
+      },
+      "restated_plan": {
+        "checked": true,
+        "confidence_score": 59.619140625,
+        "bounding_box": {
+          "width": 0.12585952877998352,
+          "height": 0.011304784566164017,
+          "left": 0.1190304309129715,
+          "top": 0.1276886910200119
+        },
+        "ppa_restatement": {
+          "checked": false,
+          "confidence_score": null,
+          "bounding_box": null
+        }
+      },
+      "initial_effective_date_of_plan": {
+        "checked": false,
+        "value": "1, 1991",
+        "confidence_score": 81.15566507975261,
+        "bounding_box": {
+          "width": 0.5920432806015015,
+          "height": 0.012311698868870735,
+          "left": 0.11854711920022964,
+          "top": 0.2189515084028244
+        }
+      },
+      "restatement_effective_date": {
+        "checked": false,
+        "value": "February 1, 2018",
+        "confidence_score": 98.86443283081054,
+        "bounding_box": {
+          "width": 0.7765451073646545,
+          "height": 0.037644654512405396,
+          "left": 0.12495920807123184,
+          "top": 0.2567405700683594
+        }
+      },
+      "restatement_of_surviving_and_merging_plans": {
+        "checked": false,
+        "value": null,
+        "confidence_score": 54.58984375,
+        "bounding_box": {
+          "width": 0.018840109929442406,
+          "height": 0.010685510002076626,
+          "left": 0.11821029335260391,
+          "top": 0.3637596070766449
+        },
+        "merging_plan": {
+          "value": null,
+          "confidence_score": null,
+          "bounding_box": null
+        },
+        "additional_merging_plans": {
+          "checked": true,
+          "confidence_score": 69.57290649414062,
+          "bounding_box": {
+            "width": 0.0177140049636364,
+            "height": 0.010431120172142982,
+            "left": 0.1549443155527115,
+            "top": 0.4780673682689667
+          },
+          "value": [
+            {
+              "name_of_merging_plan": {
+                "value": null,
+                "confidence_score": null,
+                "bounding_box": null
+              },
+              "merger_date": {
+                "value": null,
+                "confidence_score": null,
+                "bounding_box": null
+              },
+              "restated_effective_date": {
+                "value": null,
+                "confidence_score": null,
+                "bounding_box": null
+              },
+              "original_effective_date": {
+                "value": "2014",
+                "confidence_score": 99.765625,
+                "bounding_box": {
+                  "width": 0.028579868376255035,
+                  "height": 0.009619283489882946,
+                  "left": 0.103243887424469,
+                  "top": 0.9480125904083252
+                }
+              }
+            },
+            {
+              "name_of_merging_plan": {
+                "value": null,
+                "confidence_score": null,
+                "bounding_box": null
+              },
+              "merger_date": {
+                "value": null,
+                "confidence_score": null,
+                "bounding_box": null
+              },
+              "restated_effective_date": {
+                "value": null,
+                "confidence_score": null,
+                "bounding_box": null
+              },
+              "original_effective_date": {
+                "value": null,
+                "confidence_score": null,
+                "bounding_box": null
+              }
+            }
+          ]
+        }
+      },
+      "special_effective_date_for_elective_deferral_provisions": {
+        "checked": false,
+        "value": null,
+        "confidence_score": 57.03125,
+        "bounding_box": {
+          "width": 0.018282344564795494,
+          "height": 0.010805601254105568,
+          "left": 0.11809087544679642,
+          "top": 0.5867623090744019
+        }
+      }
+    },
+    "trustee": {
+      "discretionary_trustee": {
+        "checked": false,
+        "value": null,
+        "confidence_score": null,
+        "bounding_box": null
+      },
+      "a_nondiscretionary_trustee_or_custodian": {
+        "checked": true,
+        "value": null,
+        "confidence_score": 61.083984375,
+        "bounding_box": {
+          "width": 0.48734551668167114,
+          "height": 0.012077738530933857,
+          "left": 0.1186317428946495,
+          "top": 0.7136611938476562
+        }
+      },
+      "a_trustee_under_the": {
+        "checked": false,
+        "value": null,
+        "confidence_score": 58.154296875,
+        "bounding_box": {
+          "width": 0.018007872626185417,
+          "height": 0.011003757826983929,
+          "left": 0.11805006861686707,
+          "top": 0.7342501878738403
+        }
+      },
+      "use_of_non_approved_trust": {
+        "checked": null,
+        "value": null,
+        "confidence_score": null,
+        "bounding_box": null
+      }
+    }
+  },
+  {
+    "page": 4,
+    "contribution_types": {
+      "frozen_plan": {
+        "Contributions cease": {
+          "checked": false,
+          "confidence_score": 71.923828125,
+          "bounding_box": {
+            "width": 0.018270278349518776,
+            "height": 0.010394120588898659,
+            "left": 0.11815200746059418,
+            "top": 0.09419625252485275
+          },
+          "effective_date_of_freeze": {
+            "checked": false,
+            "value": null,
+            "confidence_score": 80.56640625,
+            "bounding_box": {
+              "width": 0.018007734790444374,
+              "height": 0.011003782041370869,
+              "left": 0.15506543219089508,
+              "top": 0.11403817683458328
+            }
+          }
+        }
+      },
+      "contributions": {
+        "pre_tax_deferrals": {
+          "checked": true,
+          "confidence_score": 63.28125,
+          "bounding_box": {
+            "width": 0.013472571037709713,
+            "height": 0.009083244018256664,
+            "left": 0.11832305043935776,
+            "top": 0.20345140993595123
+          },
+          "roth_deferrals": {
+            "checked": false,
+            "confidence_score": 78.3203125,
+            "bounding_box": {
+              "width": 0.7489967346191406,
+              "height": 0.024542955681681633,
+              "left": 0.15497487783432007,
+              "top": 0.2228773683309555
+            }
+          }
+        },
+        "matching": {
+          "checked": false,
+          "confidence_score": 0,
+          "bounding_box": {
+            "width": 0.0205815639346838,
+            "height": 0.010410286486148834,
+            "left": 0.11758292466402054,
+            "top": 0.2572547197341919
+          }
+        },
+        "nonelective": {
+          "checked": true,
+          "confidence_score": 68.212890625,
+          "bounding_box": {
+            "width": 0.7754645347595215,
+            "height": 0.024706704542040825,
+            "left": 0.11845443397760391,
+            "top": 0.29046663641929626
+          }
+        },
+        "safe_harbor/additional_matching": {
+          "checked": false,
+          "confidence_score": 0,
+          "bounding_box": {
+            "width": 0.01780700869858265,
+            "height": 0.010060086846351624,
+            "left": 0.1184215173125267,
+            "top": 0.3247934877872467
+          }
+        },
+        "employee_after_tax": {
+          "checked": false,
+          "confidence_score": 0,
+          "bounding_box": {
+            "width": 0.02048000507056713,
+            "height": 0.010339684784412384,
+            "left": 0.1177239939570427,
+            "top": 0.3846627175807953
+          }
+        },
+        "simple_401k": {
+          "checked": false,
+          "confidence_score": 0,
+          "bounding_box": {
+            "width": 0.01842104271054268,
+            "height": 0.010759077034890652,
+            "left": 0.11840089410543442,
+            "top": 0.4053526520729065
+          }
+        },
+        "designated_ira": {
+          "checked": false,
+          "confidence_score": 0,
+          "bounding_box": {
+            "width": 0.01890796236693859,
+            "height": 0.010936392471194267,
+            "left": 0.11801303178071976,
+            "top": 0.4388198256492615
+          }
+        }
+      }
+    },
+    "disability": {
+      "basic_plan": {
+        "checked": false,
+        "confidence_score": 68.359375,
+        "bounding_box": {
+          "width": 0.0180076751857996,
+          "height": 0.010003373958170414,
+          "left": 0.11805134266614914,
+          "top": 0.48516330122947693
+        }
+      },
+      "describe": {
+        "checked": false,
+        "value": null,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.018007677048444748,
+          "height": 0.01100371964275837,
+          "left": 0.1180514320731163,
+          "top": 0.5051699876785278
+        }
+      }
+    },
+    "excluded_employees": {
+      "no_excluded_employees": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.01942806877195835,
+          "height": 0.010299840942025185,
+          "left": 0.11775431782007217,
+          "top": 0.5999934673309326
+        }
+      },
+      "Exclusions_same_for_all_contribution_types": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.01759868673980236,
+          "height": 0.009820995852351189,
+          "left": 0.11881472915410995,
+          "top": 0.6339398622512817
+        }
+      },
+      "Exclusions_different_exclusions_apply": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.01826193369925022,
+          "height": 0.01047448068857193,
+          "left": 0.11840260028839111,
+          "top": 0.66722571849823
+        }
+      },
+      "exclusions": {
+        "no_exclusions": {
+          "checked": false,
+          "confidence_score": 0,
+          "bounding_box": {
+            "width": 0.018390273675322533,
+            "height": 0.010723830200731754,
+            "left": 0.11830060929059982,
+            "top": 0.7944062352180481
+          },
+          "all_contributions": "N/A",
+          "elective_deferrals": null,
+          "matching": null,
+          "nonelective": null
+        },
+        "collective_bargaining(union)_employees": {
+          "checked": false,
+          "confidence_score": 0,
+          "bounding_box": {
+            "width": 0.01850884221494198,
+            "height": 0.010598260909318924,
+            "left": 0.11822152137756348,
+            "top": 0.8286107778549194
+          },
+          "all_contributions": false,
+          "elective_deferrals": false,
+          "matching": false,
+          "nonelective": false
+        },
+        "nonresident_aliens": {
+          "checked": false,
+          "confidence_score": 0,
+          "bounding_box": {
+            "width": 0.017653819173574448,
+            "height": 0.010468456894159317,
+            "left": 0.11853235960006714,
+            "top": 0.8754399418830872
+          },
+          "all_contributions": false,
+          "elective_deferrals": false,
+          "matching": false,
+          "nonelective": false
+        },
+        "HCEs": {
+          "checked": false,
+          "confidence_score": 0,
+          "bounding_box": {
+            "width": 0.007064941804856062,
+            "height": 0.01026600506156683,
+            "left": 0.11807000637054443,
+            "top": 0.9090074300765991
+          },
+          "all_contributions": false,
+          "elective_deferrals": false,
+          "matching": false,
+          "nonelective": false
+        }
+      }
+    }
+  },
+  {
+    "page": 5,
+    "compensation": {
+      "w-2_wages": {
+        "checked": true,
+        "confidence_score": 81.201171875,
+        "bounding_box": {
+          "width": 0.01915018819272518,
+          "height": 0.009946526028215885,
+          "left": 0.11792545020580292,
+          "top": 0.3055765926837921
+        },
+        "all_contributions": null,
+        "elective_deferrals": null,
+        "matching": null,
+        "nonelective": null
+      },
+      "code_3401_federal_income_tax": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.02000359818339348,
+          "height": 0.00980212353169918,
+          "left": 0.11782652139663696,
+          "top": 0.33927008509635925
+        },
+        "all_contributions": null,
+        "elective_deferrals": null,
+        "matching": null,
+        "nonelective": null
+      },
+      "415_compensation(simplified)": {
+        "checked": true,
+        "confidence_score": 79.0936279296875,
+        "bounding_box": {
+          "width": 0.017835810780525208,
+          "height": 0.01030676905065775,
+          "left": 0.11864559352397919,
+          "top": 0.38601139187812805
+        },
+        "all_contributions": null,
+        "elective_deferrals": null,
+        "matching": null,
+        "nonelective": null
+      },
+      "describe_compensation_by_contribution_type": {
+        "checked": false,
+        "value": null,
+        "confidence_score": 75.29296875,
+        "bounding_box": {
+          "width": 0.018967418000102043,
+          "height": 0.010235588997602463,
+          "left": 0.11811091005802155,
+          "top": 0.4721517562866211
+        }
+      }
+    },
+    "pre_entry/post_severance_compensation": {
+      "pre_entry_compensation": {
+        "Plan_Year": {
+          "checked": true,
+          "confidence_score": 85.546875,
+          "bounding_box": {
+            "width": 0.32451149821281433,
+            "height": 0.024487299844622612,
+            "left": 0.11868959665298462,
+            "top": 0.6847304701805115
+          },
+          "all_contributions": null,
+          "elective_deferrals": null,
+          "matching": null,
+          "nonelective": null
+        },
+        "Participating_Period": {
+          "checked": true,
+          "confidence_score": 84.375,
+          "bounding_box": {
+            "width": 0.32910647988319397,
+            "height": 0.02500184066593647,
+            "left": 0.11829488724470139,
+            "top": 0.7181892395019531
+          },
+          "all_contributions": null,
+          "elective_deferrals": null,
+          "matching": null,
+          "nonelective": null
+        },
+        "describe_pre_entry_compensation": {
+          "checked": false,
+          "value": null,
+          "confidence_score": 0,
+          "bounding_box": {
+            "width": 0.018098698928952217,
+            "height": 0.010113061405718327,
+            "left": 0.11829489469528198,
+            "top": 0.7189189195632935
+          }
+        }
+      }
+    }
+  },
+  {
+    "page": 6,
+    "post_severance_compensation": {
+      "none": {
+        "checked": true,
+        "confidence_score": 0.0,
+        "bounding_box": {
+          "width": 0.018801487982273102,
+          "height": 0.009546216577291489,
+          "left": 0.11796741932630539,
+          "top": 0.14141404628753662
+        }
+      },
+      "same_for_all_contribution_types": {
+        "checked": false,
+        "confidence_score": 0.0,
+        "bounding_box": {
+          "width": 0.00436388561502099,
+          "height": 0.009685690514743328,
+          "left": 0.11786840856075287,
+          "top": 0.18803101778030396
+        }
+      },
+      "adjustments_different_conditions_apply": {
+        "checked": false,
+        "confidence_score": 0.0,
+        "bounding_box": {
+          "width": 0.005206362344324589,
+          "height": 0.009334469214081764,
+          "left": 0.11792689561843872,
+          "top": 0.22195450961589813
+        }
+      }
+    },
+    "post-severance_compensation": {
+      "none": {
+        "checked": false,
+        "confidence_score": 0.0,
+        "bounding_box": {
+          "width": 0.018801487982273102,
+          "height": 0.009546216577291489,
+          "left": 0.11796741932630539,
+          "top": 0.14141404628753662
+        },
+        "all_contributions": "N/A",
+        "elective_deferrals": null,
+        "matching": null,
+        "nonelective": null
+      },
+      "exclude_all": {
+        "checked": false,
+        "confidence_score": 0.0,
+        "bounding_box": {
+          "width": 0.019795246422290802,
+          "height": 0.010256306268274784,
+          "left": 0.11792939156293869,
+          "top": 0.3618800938129425
+        },
+        "all_contributions": null,
+        "elective_deferrals": null,
+        "matching": null,
+        "nonelective": null
+      },
+      "regular_pay": {
+        "checked": false,
+        "confidence_score": 0.0,
+        "bounding_box": {
+          "width": 0.019168559461832047,
+          "height": 0.009990022517740726,
+          "left": 0.11781076341867447,
+          "top": 0.43510177731513977
+        },
+        "all_contributions": null,
+        "elective_deferrals": null,
+        "matching": null,
+        "nonelective": null
+      },
+      "leave_cashout": {
+        "checked": false,
+        "confidence_score": 78.369140625,
+        "bounding_box": {
+          "width": 0.01940087415277958,
+          "height": 0.010675019584596157,
+          "left": 0.11790919303894043,
+          "top": 0.5210095047950745
+        },
+        "all_contributions": null,
+        "elective_deferrals": null,
+        "matching": null,
+        "nonelective": null
+      },
+      "deferred_compensation": {
+        "checked": false,
+        "confidence_score": 80.615234375,
+        "bounding_box": {
+          "width": 0.01905911974608898,
+          "height": 0.010835749097168446,
+          "left": 0.11810874193906784,
+          "top": 0.5674070715904236
+        },
+        "all_contributions": null,
+        "elective_deferrals": null,
+        "matching": null,
+        "nonelective": null
+      },
+      "salary_continuation_for_military_service": {
+        "checked": false,
+        "confidence_score": 78.466796875,
+        "bounding_box": {
+          "width": 0.018979044631123543,
+          "height": 0.011060277000069618,
+          "left": 0.11816809326410294,
+          "top": 0.6141705513000488
+        },
+        "all_contributions": null,
+        "elective_deferrals": null,
+        "matching": null,
+        "nonelective": null
+      },
+      "salary_continuation_for_disabled_participants": {
+        "checked": false,
+        "confidence_score": 78.22265625,
+        "bounding_box": {
+          "width": 0.018185019493103027,
+          "height": 0.01105000264942646,
+          "left": 0.11850301921367645,
+          "top": 0.6609927415847778
+        },
+        "for_NHCEs_only": {
+          "checked": false,
+          "confidence_score": 0.0,
+          "bounding_box": {
+            "width": 0.017982972785830498,
+            "height": 0.010588015429675579,
+            "left": 0.15524332225322723,
+            "top": 0.7207295894622803
+          }
+        },
+        "for_all_participants": {
+          "checked": false,
+          "value": null,
+          "confidence_score": 0.0,
+          "bounding_box": {
+            "width": 0.09649936854839325,
+            "height": 0.011165104806423187,
+            "left": 0.3877105712890625,
+            "top": 0.7677251696586609
+          }
+        }
+      },
+      "describe_post_severance_compensation_by_contribution_type": {
+        "checked": false,
+        "value": null,
+        "confidence_score": 0.0,
+        "bounding_box": {
+          "width": 0.35549455881118774,
+          "height": 0.01084337942302227,
+          "left": 0.5516588091850281,
+          "top": 0.787513017654419
+        }
+      }
+    }
+  },
+  {
+    "page": 7,
+    "excluded_compensation": {
+      "no_exclusions": {
+        "checked": true,
+        "confidence_score": 79.8828125,
+        "bounding_box": {
+          "width": 0.4894290268421173,
+          "height": 0.012985189445316792,
+          "left": 0.11872844398021698,
+          "top": 0.7245254516601562
+        }
+      },
+      "exclusions_same_for_all_contribution_types": {
+        "checked": true,
+        "confidence_score": 74.0234375,
+        "bounding_box": {
+          "width": 0.7901789546012878,
+          "height": 0.026138026267290115,
+          "left": 0.11800640821456909,
+          "top": 0.14023125171661377
+        }
+      },
+      "exclusions_different_conditions_apply": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": null
+      },
+      "compensation_exclusions": {
+        "no_exclusions": {
+          "checked": false,
+          "confidence_score": 0,
+          "bounding_box": null,
+          "all_contributions": "N/A",
+          "elective_deferrals": false,
+          "matching": false,
+          "nonelective": false
+        },
+        "elective_deferrals": {
+          "checked": false,
+          "confidence_score": 0,
+          "bounding_box": null,
+          "all_contributions": "N/A",
+          "elective_deferrals": "N/A",
+          "matching": false,
+          "nonelective": false
+        },
+        "fringe_benefits": {
+          "checked": true,
+          "confidence_score": 85.05859375,
+          "bounding_box": {
+            "width": 0.2691192626953125,
+            "height": 0.024497412145137787,
+            "left": 0.11823929101228714,
+            "top": 0.34281179308891296
+          },
+          "all_contributions": false,
+          "elective_deferrals": false,
+          "matching": false,
+          "nonelective": false
+        },
+        "HCE_compensation_exceeding": {
+          "checked": false,
+          "value": null,
+          "confidence_score": 83.69140625,
+          "bounding_box": {
+            "width": 0.020334940403699875,
+            "height": 0.010705715976655483,
+            "left": 0.11733401566743851,
+            "top": 0.37683942914009094
+          },
+          "all_contributions": false,
+          "elective_deferrals": false,
+          "matching": false,
+          "nonelective": false
+        }
+      }
+    },
+    "hours_of_service": {
+      "actual_method": {
+        "checked": true,
+        "confidence_score": 84.27734375,
+        "bounding_box": {
+          "width": 0.017136121168732643,
+          "height": 0.010031267069280148,
+          "left": 0.11912550777196884,
+          "top": 0.4837822914123535
+        },
+        "all_purposes": false,
+        "allocation_eligibility": false,
+        "vesting": false,
+        "conditions": false
+      },
+      "equivalency_method": {
+        "checked": false,
+        "value": null,
+        "confidence_score": 88.916015625,
+        "bounding_box": {
+          "width": 0.017007412388920784,
+          "height": 0.009002904407680035,
+          "left": 0.11905176192522049,
+          "top": 0.5041751861572266
+        },
+        "all_purposes": false,
+        "allocation_eligibility": false,
+        "vesting": false,
+        "conditions": false
+      },
+      "elapsed_time_method": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": null,
+        "all_purposes": false,
+        "allocation_eligibility": false,
+        "vesting": false,
+        "conditions": false
+      },
+      "actual(hourly)_and_equivalency(salaried)": {
+        "checked": false,
+        "value": null,
+        "confidence_score": 87.109375,
+        "bounding_box": {
+          "width": 0.01700741983950138,
+          "height": 0.010003207251429558,
+          "left": 0.11905235052108765,
+          "top": 0.5581924915313721
+        },
+        "all_purposes": false,
+        "allocation_eligibility": false,
+        "vesting": false,
+        "conditions": false
+      },
+      "describe_method": {
+        "checked": false,
+        "value": null,
+        "confidence_score": 80.615234375,
+        "bounding_box": {
+          "width": 0.019003020599484444,
+          "height": 0.010109690949320793,
+          "left": 0.11790286749601364,
+          "top": 0.6187465190887451
+        }
+      }
+    },
+    "elective_service_crediting": {
+      "not_applicable": {
+        "checked": true,
+        "confidence_score": 79.8828125,
+        "bounding_box": {
+          "width": 0.4894290268421173,
+          "height": 0.012985189445316792,
+          "left": 0.11872844398021698,
+          "top": 0.7245254516601562
+        }
+      },
+      "applies": {
+        "checked": false,
+        "confidence_score": 83.984375,
+        "bounding_box": {
+          "width": 0.017521444708108902,
+          "height": 0.01037427969276905,
+          "left": 0.15515998005867004,
+          "top": 0.8339629173278809
+        },
+        "all_purposes": {
+          "checked": false,
+          "value": null,
+          "confidence_score": 0,
+          "bounding_box": null
+        },
+        "designated_purposes": {
+          "checked": false,
+          "confidence_score": 0,
+          "bounding_box": null,
+          "employer1": {
+            "value": null,
+            "confidence_score": 0,
+            "bounding_box": {
+              "width": 0.29895663261413574,
+              "height": 0.011673249304294586,
+              "left": 0.25977808237075806,
+              "top": 0.8789772987365723
+            },
+            "eligibility": false,
+            "vesting": false,
+            "allocation": false
+          },
+          "employer2": {
+            "value": null,
+            "confidence_score": 0,
+            "bounding_box": {
+              "width": 0.2994169294834137,
+              "height": 0.011788512580096722,
+              "left": 0.2597353458404541,
+              "top": 0.899552047252655
+            },
+            "eligibility": false,
+            "vesting": false,
+            "allocation": false
+          },
+          "employer3": {
+            "value": null,
+            "confidence_score": 0,
+            "bounding_box": null,
+            "eligibility": false,
+            "vesting": false,
+            "allocation": false
+          }
+        }
+      }
+    }
+  },
+  {
+    "page": 8,
+    "time_period": {
+      "all": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.0010004418436437845,
+          "height": 0.0010003442876040936,
+          "left": 0.13405770063400269,
+          "top": 0.0830255076289177
+        }
+      },
+      "service_after": {
+        "checked": false,
+        "value": null,
+        "confidence_score": 76.806640625,
+        "bounding_box": {
+          "width": 0.017703214660286903,
+          "height": 0.01060863770544529,
+          "left": 0.19226007163524628,
+          "top": 0.12807251513004303
+        }
+      },
+      "service_before": {
+        "checked": false,
+        "value": null,
+        "confidence_score": 76.171875,
+        "bounding_box": {
+          "width": 0.017212364822626114,
+          "height": 0.01058228313922882,
+          "left": 0.1921653151512146,
+          "top": 0.16165128350257874
+        }
+      }
+    },
+    "describe_elective_predecessor_employer_service_crediting": {
+      "checked": false,
+      "value": null,
+      "confidence_score": 70.947265625,
+      "bounding_box": {
+        "width": 0.017625683918595314,
+        "height": 0.010464287362992764,
+        "left": 0.15496088564395905,
+        "top": 0.19536209106445312
+      }
+    },
+    "eligibility": {
+      "no_conditions": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.019611582159996033,
+          "height": 0.010289215482771397,
+          "left": 0.1180172935128212,
+          "top": 0.38816311955451965
+        }
+      },
+      "eligibility_same_for_all_contribution_type": {
+        "checked": true,
+        "confidence_score": 62.548828125,
+        "bounding_box": {
+          "width": 0.017134100198745728,
+          "height": 0.009497477672994137,
+          "left": 0.11813671886920929,
+          "top": 0.4219553470611572
+        }
+      },
+      "eligibility_different_conditions_apply": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.01940423622727394,
+          "height": 0.010388434864580631,
+          "left": 0.11826765537261963,
+          "top": 0.4684957265853882
+        }
+      },
+      "eligibility_conditions": {
+        "none": {
+          "checked": false,
+          "confidence_score": 0,
+          "bounding_box": {
+            "width": 0.01821128837764263,
+            "height": 0.01104368269443512,
+            "left": 0.11837539821863174,
+            "top": 0.6479119062423706
+          },
+          "all_contributions": null,
+          "elective_deferrals": null,
+          "matching": null,
+          "nonelective": null,
+          "safe_harbor": null
+        },
+        "age": {
+          "checked": true,
+          "value": "18 (not to exceed age 21)",
+          "confidence_score": 70.99609375,
+          "bounding_box": {
+            "width": 0.01822657138109207,
+            "height": 0.010398784652352333,
+            "left": 0.11820176988840103,
+            "top": 0.6944530010223389
+          },
+          "all_contributions": null,
+          "elective_deferrals": null,
+          "matching": null,
+          "nonelective": null,
+          "safe_harbor": null
+        },
+        "one_year_of_service": {
+          "checked": true,
+          "confidence_score": 43.9208984375,
+          "bounding_box": {
+            "width": 0.008828242309391499,
+            "height": 0.007843686267733574,
+            "left": 0.1218075081706047,
+            "top": 0.7165808081626892
+          },
+          "all_contributions": null,
+          "elective_deferrals": null,
+          "matching": null,
+          "nonelective": null,
+          "safe_harbor": null
+        },
+        "two_years_of_service": {
+          "checked": false,
+          "confidence_score": 79.6875,
+          "bounding_box": {
+            "width": 0.01700751669704914,
+            "height": 0.010003502480685711,
+            "left": 0.8523682355880737,
+            "top": 0.7152436375617981
+          },
+          "all_contributions": "N/A",
+          "elective_deferrals": "N/A",
+          "matching": true,
+          "nonelective": true,
+          "safe_harbor": "N/A"
+        }
+      }
+    }
+  },
+  {
+    "page": 9,
+    "eligibility_conditions": {
+      "months": {
+        "checked": false,
+        "value": null,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.0010004534851759672,
+          "height": 0.001000350108370185,
+          "left": 0.1050369143486023,
+          "top": 0.083036407828331
+        },
+        "all_contributions": false,
+        "elective_deferrals": false,
+        "matching": false,
+        "nonelective": false,
+        "safe_harbor": false
+      },
+      "months_with_at_least_hours_of_service": {
+        "checked": false,
+        "value": "month(s) with at least Hours of Service in each month (not exceeding 12 months for Elective Deferrals, Safe Harbor Contributions and SIMPLE Contributions and not exceeding 24 months for other contributions). If more than 12 months, 100% vesting is required. If the Employee does not complete the designated Hours of Service each month during the specified monthly time period, the Employee is subject to the one Year of Service (or two Years of Service if elect more than 12 months) requirement as defined in Election 16. The months during which the Employee completes the specified Hours of Service (Choose one of (1) or (2).):",
+        "confidence_score": 99.91472501021165,
+        "bounding_box": {
+          "width": 0.2070910781621933,
+          "height": 0.009005009196698666,
+          "left": 0.19107824563980103,
+          "top": 0.4411541521549225
+        },
+        "all_contributions": false,
+        "elective_deferrals": false,
+        "matching": false,
+        "nonelective": false,
+        "safe_harbor": false,
+        "consecutive": {
+          "checked": true,
+          "confidence_score": 58.154296875,
+          "bounding_box": {
+            "width": 0.018008016049861908,
+            "height": 0.01000354066491127,
+            "left": 0.15506240725517273,
+            "top": 0.4411563277244568
+          }
+        },
+        "non_consecutive": {
+          "checked": false,
+          "confidence_score": 0,
+          "bounding_box": {
+            "width": 0.01864890567958355,
+            "height": 0.011068827472627163,
+            "left": 0.1548658311367035,
+            "top": 0.4618408679962158
+          }
+        }
+      },
+      "hours_of_service_within_the_time_period": {
+        "checked": false,
+        "value": "Hours of Service within the time period following the Employee's Employment Commencement Date (not exceeding 12 months for Elective Deferrals, Safe Harbor Contributions and SIMPLE Contributions and not exceeding 24 months for other contributions). If more than 12 months, 100% vesting is required. If the Employee does not complete the designated Hours of Service during the specified time period (if any), the Employee is subject to the one Year of Service (or two Years of Service if elect more than 12 months) requirement as defined in Election 16.",
+        "confidence_score": 99.91948769309305,
+        "bounding_box": {
+          "width": 0.29849937558174133,
+          "height": 0.1790984869003296,
+          "left": 0.15324677526950836,
+          "top": 0.48249319195747375
+        },
+        "all_contributions": false,
+        "elective_deferrals": false,
+        "matching": false,
+        "nonelective": false,
+        "safe_harbor": false
+      },
+      "describe_eligibility_conditions": {
+        "checked": true,
+        "value": "Describe eligibility conditions:",
+        "confidence_score": 97.41317240397136,
+        "bounding_box": {
+          "width": 0.18984457850456238,
+          "height": 0.010995524935424328,
+          "left": 0.15475620329380035,
+          "top": 0.7069822549819946
+        }
+      }
+    }
+  },
+  {
+    "page": 10,
+    "year_of_service_eligibility": {
+      "year_of_service": {
+        "checked": true,
+        "value": "1",
+        "confidence_score": 80.29655456542969,
+        "bounding_box": {
+          "width": 0.014812223613262177,
+          "height": 0.009224659763276577,
+          "left": 0.11831904202699661,
+          "top": 0.15394632518291473
+        }
+      },
+      "subsequent_eligibility_computation_periods": {
+        "checked": true,
+        "confidence_score": 69.7265625,
+        "bounding_box": {
+          "width": 0.016392549499869347,
+          "height": 0.009314042516052723,
+          "left": 0.11790333688259125,
+          "top": 0.12113845348358154
+        },
+        "plan_year": {
+          "checked": true,
+          "confidence_score": 77.34375,
+          "bounding_box": {
+            "width": 0.01735253818333149,
+            "height": 0.009860505349934101,
+            "left": 0.1556013971567154,
+            "top": 0.1540365368127823
+          }
+        },
+        "anniversary_year": {
+          "checked": false,
+          "confidence_score": 0,
+          "bounding_box": {
+            "width": 0.01903802901506424,
+            "height": 0.009799721650779247,
+            "left": 0.15494784712791443,
+            "top": 0.18803958594799042
+          }
+        },
+        "split": {
+          "checked": false,
+          "value1": null,
+          "value2": null,
+          "confidence_score": 84.08203125,
+          "bounding_box": {
+            "width": 0.018415376543998718,
+            "height": 0.009874533861875534,
+            "left": 0.15539175271987915,
+            "top": 0.2084808349609375
+          }
+        }
+      }
+    },
+    "entry_date": {
+      "semi_annual": {
+        "checked": false,
+        "confidence_score": 87.6953125,
+        "bounding_box": {
+          "width": 0.019080862402915955,
+          "height": 0.0105954734608531,
+          "left": 0.11798431724309921,
+          "top": 0.40870434045791626
+        },
+        "all_contributions": false,
+        "elective_deferrals": false,
+        "matching": false,
+        "nonelective": false
+      },
+      "first_day_of_plan_year": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.02025887742638588,
+          "height": 0.009973142296075821,
+          "left": 0.11777256429195404,
+          "top": 0.44261041283607483
+        },
+        "all_contributions": false,
+        "elective_deferrals": false,
+        "matching": false,
+        "nonelective": false
+      },
+      "first_day_of_each_plan_year_quarter": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.017454981803894043,
+          "height": 0.01066859532147646,
+          "left": 0.11889713257551193,
+          "top": 0.4627976417541504
+        },
+        "all_contributions": false,
+        "elective_deferrals": false,
+        "matching": false,
+        "nonelective": false
+      },
+      "first_day_of_each_month": {
+        "checked": true,
+        "confidence_score": 81.494140625,
+        "bounding_box": {
+          "width": 0.017588218674063683,
+          "height": 0.009663469158113003,
+          "left": 0.11820373684167862,
+          "top": 0.483614444732666
+        },
+        "all_contributions": false,
+        "elective_deferrals": false,
+        "matching": false,
+        "nonelective": false
+      },
+      "immediate": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.02003416046500206,
+          "height": 0.010218883864581585,
+          "left": 0.11784369498491287,
+          "top": 0.5041958689689636
+        },
+        "all_contributions": false,
+        "elective_deferrals": false,
+        "matching": false,
+        "nonelective": false
+      },
+      "first_day_of_each_payroll_period": {
+        "checked": false,
+        "confidence_score": 85.595703125,
+        "bounding_box": {
+          "width": 0.23762178421020508,
+          "height": 0.01137878093868494,
+          "left": 0.11830758303403854,
+          "top": 0.5378537774085999
+        },
+        "all_contributions": false,
+        "elective_deferrals": false,
+        "matching": false,
+        "nonelective": false
+      },
+      "describe_entry_dates": {
+        "checked": false,
+        "value": null,
+        "confidence_score": 81.0546875,
+        "bounding_box": {
+          "width": 0.01983337104320526,
+          "height": 0.010411827825009823,
+          "left": 0.11774183809757233,
+          "top": 0.5586460828781128
+        }
+      }
+    },
+    "prospective/retroactive_entry_dates": {
+      "immediately_following_or_coincident_with_the_date": {
+        "checked": true,
+        "confidence_score": 78.22265625,
+        "bounding_box": {
+          "width": 0.3446342349052429,
+          "height": 0.024472670629620552,
+          "left": 0.11838250607252121,
+          "top": 0.8239071369171143
+        },
+        "all_contributions": false,
+        "elective_deferrals": false,
+        "matching": false,
+        "nonelective": false
+      },
+      "immediately_following_the_date_the_employee_completes_the_eligibility_conditions": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.019990043714642525,
+          "height": 0.010828777216374874,
+          "left": 0.11787458509206772,
+          "top": 0.8578324913978577
+        },
+        "all_contributions": false,
+        "elective_deferrals": false,
+        "matching": false,
+        "nonelective": false
+      },
+      "immediately_preceding_or_coincident_with_the_date_the_employee_completes_the_eligibility_conditions": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.019419293850660324,
+          "height": 0.010802180506289005,
+          "left": 0.11784222722053528,
+          "top": 0.8915237188339233
+        },
+        "all_contributions": "N/A",
+        "elective_deferrals": "N/A",
+        "matching": false,
+        "nonelective": false
+      }
+    }
+  },
+  {
+    "page": 11,
+    "prospective/retroactive_entry_dates": {
+      "immediately_preceding_the_date_the_employee_completes_the_eligibility_conditions": {
+        "checked": true,
+        "confidence_score": 72.998046875,
+        "bounding_box": {
+          "width": 0.018680956214666367,
+          "height": 0.009271496906876564,
+          "left": 0.1182621419429779,
+          "top": 0.07406563311815262
+        },
+        "all_contributions": "N/A",
+        "elective_deferrals": "N/A",
+        "matching": true,
+        "nonelective": true
+      },
+      "nearest_the_date_the_employee_completes_the_eligibility_conditions": {
+        "checked": false,
+        "confidence_score": 75.0,
+        "bounding_box": {
+          "width": 0.020043479278683662,
+          "height": 0.010069250129163265,
+          "left": 0.11797977983951569,
+          "top": 0.10714729875326157
+        },
+        "all_contributions": "N/A",
+        "elective_deferrals": "N/A",
+        "matching": null,
+        "nonelective": null
+      },
+      "describe_retroactive_entry_relative_to_entry_dates": {
+        "checked": false,
+        "value": null,
+        "confidence_score": 68.603515625,
+        "bounding_box": {
+          "width": 0.019636860117316246,
+          "height": 0.01009842474013567,
+          "left": 0.11811904609203339,
+          "top": 0.14121906459331512
+        }
+      }
+    },
+    "break_in_service_participation": {
+      "does_not_apply": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.0,
+          "height": 0.0,
+          "left": 0.0,
+          "top": 0.0
+        }
+      },
+      "applies": {
+        "checked": true,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.005414527375251055,
+          "height": 0.00975868385285139,
+          "left": 0.11796170473098755,
+          "top": 0.2686363756656647
+        }
+      },
+      "limited_application": {
+        "checked": true,
+        "confidence_score": 99.93870502048068,
+        "bounding_box": {
+          "width": 0.7216116786003113,
+          "height": 0.01213719043880701,
+          "left": 0.1178666353225708,
+          "top": 0.2883750796318054
+        }
+      }
+    },
+    "elective_deferral_limitation": {
+      "none": {
+        "checked": false,
+        "confidence_score": 0,
+        "bounding_box": {
+          "width": 0.01788046583533287,
+          "height": 0.011063543148338795,
+          "left": 0.1186039000749588,
+          "top": 0.42140141129493713
+        }
+      },
+      "additional_plan_limits": {
+        "checked": true,
+        "confidence_score": 64.892578125,
+        "bounding_box": {
+          "width": 0.4033938944339752,
+          "height": 0.01245839148759842,
+          "left": 0.1186039000749588,
+          "top": 0.42116251587867737
+        },
+        "maximum_deferral_amount": {
+          "checked": false,
+          "value": null,
+          "confidence_score": 0,
+          "bounding_box": {
+            "width": 0.037202514708042145,
+            "height": 0.009062187746167183,
+            "left": 0.676757276058197,
+            "top": 0.5455204248428345
+          }
+        },
+        "minimum_deferral_amount": {
+          "checked": true,
+          "value": "1% (specify",
+          "confidence_score": 99.55935287475586,
+          "bounding_box": {
+            "width": 0.19487249851226807,
+            "height": 0.012696320191025734,
+            "left": 0.6983513832092285,
+            "top": 0.581402599811554
+          }
+        },
+        "application_of_limitations": {
+          "both": {
+            "checked": false,
+            "confidence_score": 0,
+            "bounding_box": {
+              "width": 0.01799069531261921,
+              "height": 0.010499257594347,
+              "left": 0.19211678206920624,
+              "top": 0.749127209186554
+            },
+            "plan_year/participating_compensation": false,
+            "payroll_period": false,
+            "HCEs_only": false
+          },
+          "maximum_limit": {
+            "checked": true,
+            "confidence_score": 34.6923828125,
+            "bounding_box": {
+              "width": 0.010648212395608425,
+              "height": 0.009392974898219109,
+              "left": 0.19339776039123535,
+              "top": 0.7703415155410767
+            },
+            "plan_year/participating_compensation": false,
+            "payroll_period": false,
+            "HCEs_only": false
+          },
+          "minimum_limit": {
+            "checked": true,
+            "confidence_score": 35.64453125,
+            "bounding_box": {
+              "width": 0.013291234150528908,
+              "height": 0.0096292058005929,
+              "left": 0.19362270832061768,
+              "top": 0.8040045499801636
+            },
+            "plan_year/participating_compensation": false,
+            "payroll_period": false,
+            "HCEs_only": false
+          }
+        }
+      },
+      "describe_elective_deferral_limitation": {
+        "checked": false,
+        "value": "[ ]",
+        "confidence_score": 62.40234375,
+        "bounding_box": {
+          "width": 0.019140908494591713,
+          "height": 0.011129054240882397,
+          "left": 0.11809106171131134,
+          "top": 0.8371674418449402
+        }
+      }
+    }
+  }
+]

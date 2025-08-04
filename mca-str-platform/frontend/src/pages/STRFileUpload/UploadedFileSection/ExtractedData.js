@@ -9,8 +9,10 @@ import pdf2 from "assets/files/TEST CASE 2 V2 - Standardized_401k_Adoption_Agree
 import pdf3 from "assets/files/TEST CASE 3 V2 - Standardized_401k_Adoption_Agreement - Redacted.pdf";
 import pdf4 from "assets/files/aa_page2.pdf";
 import pdf5 from "assets/files/Test_Case1_aa_page234.pdf";
-import pdf6 from "assets/files/Test_Case1_aa_page1-10.pdf"
-import textractMultiPageData from "./Test_Case1_aa_page2-8_results.json";
+import pdf6 from "assets/files/Test_Case1_aa_page1-11.pdf";
+import pdf7 from "assets/files/Test_Case2_aa_page1-11.pdf";
+
+import textractMultiPageData from "./Test_Case2_aa_page1-11_anthropic_response.json";
 import {
   StyledContainer,
   PDFScrollContainer,
@@ -43,8 +45,8 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
   const [baseScale, setBaseScale] = useState(1);
   const [naturalPageSize, setNaturalPageSize] = useState({ width: 0, height: 0 });
   const [highlightBox, setHighlightBox] = useState(null);
-  const [selectedItemIndex, setSelectedItemIndex] = useState(null);
-  const [renderedPages, setRenderedPages] = useState(new Map());
+  const [selectedItemKey, setSelectedItemKey] = useState(null);
+  const [renderedPages, setRenderedPages] = useState({});
   const [isDataExtracting, setIsDataExtracting] = useState(false);
   const [showExtractedData, setShowExtractedData] = useState(false);
 
@@ -52,11 +54,11 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
   const pdfScrollRef = useRef(null);
   const extractedDataScrollRef = useRef(null);
   const pdfDocRef = useRef(null);
-  const renderTasksRef = useRef(new Map());
+  const renderTasksRef = useRef({});
   const pagesContainerRef = useRef(null);
 
-  // Higher DPI for better resolution
-  const DPI_SCALE = 3;
+  // Improved DPI for better quality
+  const DPI_SCALE = 2;
 
   const pdfMapping = {
     'TEST CASE 1 V2 - Standardized_401k_Adoption_Agreement - Redracted.pdf': pdf1,
@@ -64,59 +66,60 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
     'TEST CASE 3 V2 - Standardized_401k_Adoption_Agreement - Redracted.pdf': pdf3,
     'aa_page2.pdf': pdf4,
     'Test_Case1_aa_page234.pdf': pdf5,
-    'Test_Case1_aa_page1-10.pdf': pdf6
+    'Test_Case1_aa_page1-11.pdf': pdf6,
+    'Test_Case2_aa_page1-11.pdf': pdf7,
   };
 
-  // Helper function to convert alias to human readable format, removing section words
-  const formatAlias = (alias, groupKey) => {
-    if (!alias) return '';
-    
-    const words = alias.split('_');
-    const groupWords = groupKey.split('_');
-    
-    // Remove the words that were used to create the section
-    const filteredWords = words.filter((word, index) => {
-      // Keep the word if it's not part of the group key or if it's beyond the group key length
-      return index >= groupWords.length || word.toLowerCase() !== groupWords[index].toLowerCase();
-    });
-    
-    // If all words were filtered out, return the original alias
-    if (filteredWords.length === 0) {
-      return alias
-        .split('_')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-        .join(' ');
-    }
-    
-    return filteredWords
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(' ');
-  };
-
-  // Updated helper function to get group key considering second word for similar first words
-  const getGroupKey = (alias) => {
-    if (!alias) return 'Other';
-    
-    const words = alias.split('_');
-    const firstWord = words[0].toLowerCase();
-    
-    // Define words that need second word differentiation
-    const similarFirstWords = ['elective','excluded'];
-    
-    if (similarFirstWords.includes(firstWord) && words.length > 1) {
-      const secondWord = words[1].toLowerCase();
-      return `${firstWord}_${secondWord}`;
-    }
-    
-    return firstWord;
-  };
-
-  // Helper function to capitalize group names with multiple words
-  const formatGroupName = (groupKey) => {
-    return groupKey
+  // Helper function to format section names
+  const formatSectionName = (sectionKey) => {
+    return sectionKey
       .split('_')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
+  };
+
+  // Helper function to format field names
+  const formatFieldName = (fieldKey) => {
+    return fieldKey
+      .split('_')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  };
+
+  // Helper function to get display value based on value and checked properties
+  const getDisplayValue = (item) => {
+    const hasValue = item.value !== null && item.value !== undefined && item.value !== '';
+    const hasChecked = Object.prototype.hasOwnProperty.call(item, 'checked');
+    
+    let displayValue = '';
+    
+    // Handle checked status
+    if (hasChecked) {
+      if (item.checked === true) {
+        displayValue = '[X] Selected';
+      } else if (item.checked === false) {
+        displayValue = '[ ] Unselected';
+      }
+    }
+    
+    // Handle value
+    if (hasValue) {
+      const cleanedValue = cleanText(item.value);
+      if (hasChecked) {
+        // Both value and checked exist - combine them
+        displayValue = `${displayValue} - ${cleanedValue}`;
+      } else {
+        // Only value exists
+        displayValue = cleanedValue;
+      }
+    }
+    
+    // If neither value nor checked, return default
+    if (!hasValue && !hasChecked) {
+      displayValue = "No value";
+    }
+    
+    return displayValue;
   };
 
   // Helper function to clean and validate text data
@@ -125,11 +128,36 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
     
     // Handle special cases like checkboxes and selections
     if (text.includes("[] unselected")) return "[ ] Unselected";
-    if (text.includes("[x] selected")) return "[x] selected";
-    if (text.includes("[x]")) return "[x]";
+    if (text.includes("[x] selected")) return "[x] Selected";
+    if (text.includes("[X]")) return "[X] Selected";
+    if (text.includes("[ ]")) return "[ ] Unselected";
     
     // Clean up text and remove excessive whitespace
     return text.trim().replace(/\s+/g, ' ');
+  };
+
+  // Helper function to check if bounding box is valid for highlighting
+  const hasValidBoundingBox = (bbox) => {
+    return bbox && 
+           typeof bbox === 'object' && 
+           (bbox.left !== undefined || bbox.Left !== undefined) && 
+           (bbox.top !== undefined || bbox.Top !== undefined) && 
+           (bbox.width !== undefined || bbox.Width !== undefined) && 
+           (bbox.height !== undefined || bbox.Height !== undefined) &&
+           (bbox.width > 0 || bbox.Width > 0) && 
+           (bbox.height > 0 || bbox.Height > 0);
+  };
+
+  // Normalize bounding box to handle both uppercase and lowercase properties
+  const normalizeBoundingBox = (bbox) => {
+    if (!bbox) return null;
+    
+    return {
+      Left: bbox.Left || bbox.left || 0,
+      Top: bbox.Top || bbox.top || 0,
+      Width: bbox.Width || bbox.width || 0,
+      Height: bbox.Height || bbox.height || 0
+    };
   };
 
   useEffect(() => {
@@ -156,33 +184,37 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
     if (!pdfDocRef.current || !containerRef.current) return;
     
     // Cancel any existing render tasks
-    renderTasksRef.current.forEach(task => {
+    Object.values(renderTasksRef.current).forEach(task => {
       if (task && task.cancel) {
         task.cancel();
       }
     });
-    renderTasksRef.current.clear();
+    renderTasksRef.current = {};
 
     try {
       const currentScale = baseScale * zoomLevel;
-      const newRenderedPages = new Map();
+      const newRenderedPages = {};
       
       for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
         const page = await pdfDocRef.current.getPage(pageNum);
         const canvas = document.createElement('canvas');
-        const context = canvas.getContext("2d");
+        const context = canvas.getContext("2d", { alpha: false });
         
-        // Use higher DPI for better resolution
+        // Improved viewport calculation for better quality
         const viewport = page.getViewport({ scale: currentScale * DPI_SCALE });
         
         canvas.height = viewport.height;
         canvas.width = viewport.width;
         
+        // Set white background for better PDF rendering
+        context.fillStyle = 'white';
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        
         // Calculate display dimensions
         const displayWidth = viewport.width / DPI_SCALE;
         const displayHeight = viewport.height / DPI_SCALE;
         
-        // Set canvas style for proper display
+        // Improved canvas styling for better quality
         canvas.style.width = `${displayWidth}px`;
         canvas.style.height = `${displayHeight}px`;
         canvas.style.display = 'block';
@@ -190,20 +222,25 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
         canvas.style.border = '1px solid #e8e8e8';
         canvas.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
         canvas.style.backgroundColor = 'white';
+        canvas.style.imageRendering = 'auto';
         canvas.dataset.pageNumber = pageNum;
 
-        const renderTask = page.render({ canvasContext: context, viewport });
-        renderTasksRef.current.set(pageNum, renderTask);
+        const renderTask = page.render({ 
+          canvasContext: context, 
+          viewport,
+          intent: 'display'
+        });
+        renderTasksRef.current[pageNum] = renderTask;
         
         try {
           await renderTask.promise;
-          newRenderedPages.set(pageNum, {
+          newRenderedPages[pageNum] = {
             canvas,
             viewport,
             pageHeight: displayHeight,
             pageWidth: displayWidth,
             displayScale: currentScale
-          });
+          };
         } catch (error) {
           if (error.name !== 'RenderingCancelledException') {
             console.error(`Error rendering PDF page ${pageNum}:`, error);
@@ -222,7 +259,11 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
       if (!currentPdfPath) return;
 
       try {
-        const loadingTask = pdfjsLib.getDocument(currentPdfPath);
+        const loadingTask = pdfjsLib.getDocument({
+          url: currentPdfPath,
+          cMapUrl: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/cmaps/',
+          cMapPacked: true,
+        });
         const pdf = await loadingTask.promise;
         
         pdfDocRef.current = pdf;
@@ -237,7 +278,6 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
         if (!container) return;
         
         const { width: clientWidth } = container.getBoundingClientRect();
-        // Adjust for container padding (10px on each side)
         const availableWidth = clientWidth - 20;
         const calculatedBaseScale = availableWidth / naturalWidth;
         setBaseScale(calculatedBaseScale);
@@ -262,12 +302,12 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
-      renderTasksRef.current.forEach(task => {
+      Object.values(renderTasksRef.current).forEach(task => {
         if (task && task.cancel) {
           task.cancel();
         }
       });
-      renderTasksRef.current.clear();
+      renderTasksRef.current = {};
     };
   }, [naturalPageSize.width]);
 
@@ -282,11 +322,11 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
   }, [zoomLevel, baseScale, totalPages]);
 
   useEffect(() => {
-    if (pagesContainerRef.current && renderedPages.size > 0) {
+    if (pagesContainerRef.current && Object.keys(renderedPages).length > 0) {
       pagesContainerRef.current.innerHTML = '';
       
       for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
-        const pageData = renderedPages.get(pageNum);
+        const pageData = renderedPages[pageNum];
         if (pageData) {
           pagesContainerRef.current.appendChild(pageData.canvas);
         }
@@ -295,28 +335,29 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
   }, [renderedPages, totalPages]);
 
   const scrollToHighlight = (bbox, targetPage) => {
-    if (!bbox || !pdfScrollRef.current || !renderedPages.has(targetPage)) return;
+    const normalizedBbox = normalizeBoundingBox(bbox);
+    if (!normalizedBbox || !pdfScrollRef.current || !renderedPages[targetPage]) return;
 
     const currentScale = baseScale * zoomLevel;
-    const pageData = renderedPages.get(targetPage);
+    const pageData = renderedPages[targetPage];
     
     if (!pageData) return;
 
     let cumulativeHeight = 0;
     for (let i = 1; i < targetPage; i++) {
-      const prevPageData = renderedPages.get(i);
+      const prevPageData = renderedPages[i];
       if (prevPageData) {
-        cumulativeHeight += prevPageData.pageHeight + 20; // 20px margin between pages
+        cumulativeHeight += prevPageData.pageHeight + 20;
       }
     }
 
     const canvasWidth = naturalPageSize.width * currentScale;
     const canvasHeight = naturalPageSize.height * currentScale;
 
-    const left = bbox.Left * canvasWidth;
-    const top = bbox.Top * canvasHeight;
-    const boxWidth = bbox.Width * canvasWidth;
-    const boxHeight = bbox.Height * canvasHeight;
+    const left = normalizedBbox.Left * canvasWidth;
+    const top = normalizedBbox.Top * canvasHeight;
+    const boxWidth = normalizedBbox.Width * canvasWidth;
+    const boxHeight = normalizedBbox.Height * canvasHeight;
 
     const highlightCenterX = left + boxWidth / 2;
     const highlightCenterY = top + boxHeight / 2;
@@ -327,7 +368,6 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
     const containerWidth = containerRect.width;
     const containerHeight = containerRect.height;
 
-    // Account for container padding (10px on each side)
     const scrollLeft = Math.max(0, highlightCenterX + 10 - containerWidth / 2);
     const scrollTop = Math.max(0, absoluteHighlightY + 10 - containerHeight / 2);
 
@@ -351,18 +391,18 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
   };
 
   const renderHighlightBox = () => {
-    if (!highlightBox || !renderedPages.size || !highlightBox.page) return null;
+    if (!highlightBox || Object.keys(renderedPages).length === 0 || !highlightBox.page) return null;
 
     const targetPage = highlightBox.page;
-    const pageData = renderedPages.get(targetPage);
+    const pageData = renderedPages[targetPage];
     
     if (!pageData) return null;
 
     let cumulativeHeight = 0;
     for (let i = 1; i < targetPage; i++) {
-      const prevPageData = renderedPages.get(i);
+      const prevPageData = renderedPages[i];
       if (prevPageData) {
-        cumulativeHeight += prevPageData.pageHeight + 10; // 10px margin
+        cumulativeHeight += prevPageData.pageHeight + 10;
       }
     }
 
@@ -372,7 +412,6 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
 
     const left = highlightBox.Left * canvasWidth;
     const top = highlightBox.Top * canvasHeight;
-    // Fixed: Use Width for boxWidth calculation instead of Height
     const boxWidth = highlightBox.Width * canvasWidth;
     const boxHeight = highlightBox.Height * canvasHeight;
     const absoluteTop = cumulativeHeight + top;
@@ -389,24 +428,20 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
     );
   };
 
-  const handleClickHighlight = (item, index) => {
-    const bbox = item.bounding_box;
-    const targetPage = item.page;
+  const handleClickHighlight = (itemKey, boundingBox, page) => {
+    setSelectedItemKey(itemKey);
 
-    setSelectedItemIndex(index);
-
-    if (bbox && bbox.Width > 0 && bbox.Height > 0) {
-      setHighlightBox({...bbox, page: targetPage});
-      setTimeout(() => scrollToHighlight(bbox, targetPage), 200);
+    const normalizedBbox = normalizeBoundingBox(boundingBox);
+    
+    if (hasValidBoundingBox(normalizedBbox)) {
+      setHighlightBox({...normalizedBbox, page: page});
+      setTimeout(() => scrollToHighlight(normalizedBbox, page), 200);
     } else {
       setHighlightBox(null);
     }
   };
 
-  const renderDataField = (label, value) => {
-    const cleanedValue = cleanText(value);
-    if (!cleanedValue || cleanedValue === "No value") return null;
-    
+  const renderDataField = (label, value, hasHighlight = false) => {
     return (
       <DataRow style={{ 
         display: 'flex', 
@@ -428,55 +463,62 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
           flex: '1', 
           textAlign: 'left',
           minWidth: '0',
-          wordWrap: 'break-word'
+          wordWrap: 'break-word',
+          color: hasHighlight ? 'inherit' : '#888'
         }}>
-          {cleanedValue}
+          {value}
         </DataValue>
       </DataRow>
     );
   };
 
-  // Updated function to handle similar first words and maintain page-wise serial order
-  const groupDataByFirstWordMaintainOrder = () => {
-    const grouped = {};
-    const groupOrder = [];
-    
-    textractMultiPageData.forEach((item, index) => {
-      // Skip items with empty bounding boxes or invalid data
-      if (!item.bounding_box || (Object.keys(item.bounding_box).length === 0 && item.bounding_box.constructor === Object)) {
-        return;
+  // Recursive function to render nested data structure
+  const renderDataStructure = (data, path = '', page = null) => {
+    const items = [];
+
+    Object.entries(data).forEach(([key, value]) => {
+      const currentPath = path ? `${path}.${key}` : key;
+      
+      if (value && typeof value === 'object' && !Array.isArray(value)) {
+        // Check if this object has direct value, confidence_score, checked, or bounding_box properties
+        const hasValue = Object.prototype.hasOwnProperty.call(value, 'value');
+        const hasChecked = Object.prototype.hasOwnProperty.call(value, 'checked');
+        const hasConfidence = Object.prototype.hasOwnProperty.call(value, 'confidence_score');
+        const hasBoundingBox = Object.prototype.hasOwnProperty.call(value, 'bounding_box');
+        
+        if (hasValue || hasChecked || hasConfidence || hasBoundingBox) {
+          // This is a field with metadata
+          const hasHighlight = hasValidBoundingBox(value.bounding_box);
+          const itemKey = `${page}-${currentPath}`;
+          const displayValue = getDisplayValue(value);
+          
+          items.push(
+            <DataItem
+              key={itemKey}
+              isSelected={selectedItemKey === itemKey}
+              onClick={() => handleClickHighlight(itemKey, value.bounding_box, page)}
+              style={{
+                cursor: hasHighlight ? 'pointer' : 'default',
+                padding: '8px 12px',
+                margin: '4px 0',
+                borderRadius: '4px',
+                backgroundColor: selectedItemKey === itemKey ? '#e6f7ff' : 'transparent',
+                border: selectedItemKey === itemKey ? '1px solid #1890ff' : '1px solid transparent',
+                transition: 'all 0.3s ease',
+                opacity: hasHighlight ? 1 : 0.7
+              }}
+            >
+              {renderDataField(formatFieldName(key), displayValue, hasHighlight)}
+            </DataItem>
+          );
+        } else {
+          // This is a nested object, render its contents
+          items.push(...renderDataStructure(value, currentPath, page));
+        }
       }
-      
-      const groupKey = getGroupKey(item.alias);
-      
-      // Track the order of groups as they appear in JSON
-      if (!grouped[groupKey]) {
-        grouped[groupKey] = {};
-        groupOrder.push(groupKey);
-      }
-      
-      const pageNumber = item.page || 1;
-      
-      // Group by page within each section
-      if (!grouped[groupKey][pageNumber]) {
-        grouped[groupKey][pageNumber] = [];
-      }
-      
-      grouped[groupKey][pageNumber].push({ ...item, globalIndex: index });
     });
-    
-    // Return data in the order groups first appeared in JSON, with pages sorted within each group
-    const orderedGroups = {};
-    groupOrder.forEach(groupKey => {
-      orderedGroups[groupKey] = {};
-      // Sort pages numerically within each group
-      const sortedPages = Object.keys(grouped[groupKey]).sort((a, b) => parseInt(a) - parseInt(b));
-      sortedPages.forEach(page => {
-        orderedGroups[groupKey][page] = grouped[groupKey][page];
-      });
-    });
-    
-    return orderedGroups;
+
+    return items;
   };
 
   const renderZoomControls = () => (
@@ -538,8 +580,6 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
       return <div />;
     }
 
-    const groupedData = groupDataByFirstWordMaintainOrder();
-
     return (
       <ExtractedDataContainer 
         ref={extractedDataScrollRef} 
@@ -547,34 +587,33 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
       >
         <ExtractedDataContent>
           <SectionCard>
-            {Object.entries(groupedData).map(([groupKey, pageData]) => (
-              <div key={groupKey}>
-                <SectionHeader>{formatGroupName(groupKey)}</SectionHeader>
-                {Object.entries(pageData).map(([pageNumber, items]) => (
-                  <div key={`${groupKey}-page-${pageNumber}`}>
-                    {items.map((item, index) => (
-                      <DataItem
-                        key={`${groupKey}-page-${pageNumber}-${index}`}
-                        data-item-index={item.globalIndex}
-                        isSelected={selectedItemIndex === item.globalIndex}
-                        onClick={() => handleClickHighlight(item, item.globalIndex)}
-                        style={{
-                          cursor: 'pointer',
-                          padding: '8px 12px',
-                          margin: '4px 0',
-                          borderRadius: '4px',
-                          backgroundColor: selectedItemIndex === item.globalIndex ? '#e6f7ff' : 'transparent',
-                          border: selectedItemIndex === item.globalIndex ? '1px solid #1890ff' : '1px solid transparent',
-                          transition: 'all 0.3s ease'
-                        }}
-                      >
-                        {renderDataField(formatAlias(item.alias, groupKey), item.text)}
-                      </DataItem>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            ))}
+            {textractMultiPageData.map((pageData) => {
+              if (!pageData.page) return null;
+              
+              return (
+                <div key={`page-${pageData.page}`}>
+                  <SectionHeader style={{ fontSize: '18px', color: '#1890ff', marginBottom: '16px' }}>
+                    Page {pageData.page}
+                  </SectionHeader>
+                  
+                  {Object.entries(pageData).map(([sectionKey, sectionData]) => {
+                    if (sectionKey === 'page' || !sectionData || typeof sectionData !== 'object') return null;
+                    
+                    return (
+                      <div key={`${pageData.page}-${sectionKey}`} style={{ marginBottom: '24px' }}>
+                        <SectionHeader style={{ fontSize: '16px', marginBottom: '12px' }}>
+                          {formatSectionName(sectionKey)}
+                        </SectionHeader>
+                        
+                        <div style={{ marginLeft: '16px' }}>
+                          {renderDataStructure(sectionData, sectionKey, pageData.page)}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })}
           </SectionCard>
         </ExtractedDataContent>
       </ExtractedDataContainer>
