@@ -377,6 +377,26 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
       behavior: 'smooth'
     });
   };
+   // Helper function to format contribution type flags
+  const getContributionTypeFlags = (value) => {
+    const contributionTypes = ['all_contributions', 'elective_deferrals', 'matching', 'nonelective', 'safe_harbor'];
+    const flags = [];
+    
+    contributionTypes.forEach(type => {
+      if (Object.prototype.hasOwnProperty.call(value, type)) {
+        const flagValue = value[type];
+        if (flagValue === true) {
+          flags.push(`${formatFieldName(type)}: true`);
+        } else if (flagValue === false) {
+          flags.push(`${formatFieldName(type)}: false`);
+        } else if (flagValue === "N/A") {
+          flags.push(`${formatFieldName(type)}: N/A`);
+        }
+      }
+    });
+    
+    return flags;
+  };
 
   const handleZoomIn = () => {
     setZoomLevel(prev => Math.min(prev + 0.25, 4));
@@ -491,6 +511,7 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
           const hasHighlight = hasValidBoundingBox(value.bounding_box);
           const itemKey = `${page}-${currentPath}`;
           const displayValue = getDisplayValue(value);
+          const contributionFlags = getContributionTypeFlags(value);
           
           items.push(
             <DataItem
@@ -509,6 +530,20 @@ const DataExtractionScreen = ({ uploadedFile, uploadedFileName, uploadedFileUrl 
               }}
             >
               {renderDataField(formatFieldName(key), displayValue, hasHighlight)}
+              {contributionFlags.length > 0 && (
+                <div style={{ marginTop: '4px', paddingLeft: '16px' }}>
+                  {contributionFlags.map((flag, index) => (
+                    <div key={index} style={{ 
+                      fontSize: '12px', 
+                      color: '#666', 
+                      marginBottom: '2px',
+                      fontStyle: 'italic'
+                    }}>
+                      {flag}
+                    </div>
+                  ))}
+                </div>
+              )}
             </DataItem>
           );
         } else {
